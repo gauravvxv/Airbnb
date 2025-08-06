@@ -1,75 +1,55 @@
+Airbnb NYC 2019 Dashboard Summary (Visual-Based)
 
-Airbnb NYC 2019 Dashboard
-=========================
+ 1. Total Airbnb Listings (KPI Card)
+- Value: 48,895 listings
+- Description: Represents the total number of active Airbnb listings in the dataset.
+- Dynamic: Changes based on slicer filters (Neighbourhood Group).
 
-Overview
---------
-This Excel dashboard analyzes Airbnb listings in New York City using the 2019 dataset. It includes pivot tables, slicers, and charts to explore listing availability, pricing, reviews, and host activity across different neighborhoods and room types.
+ 2. Room Types vs Price on Different Neighbourhood Groups
+Insight:
+- Manhattan has the highest average price, especially for Entire home/apt ($249).
+- Bronx and Staten Island have the lowest average prices.
+Trend: Entire home/apt consistently has higher pricing in all boroughs.
 
-Dataset: Airbnb NYC 2019
-------------------------
-- Source: Airbnb Open Data (2019 NYC listings)
-- Fields used:
-  - id, host_id, host_name
-  - neighbourhood_group, neighbourhood
-  - room_type, price, availability_365
-  - reviews_per_month, last_review, number_of_reviews
+ 3. Monthly Reviews vs Room Types in Each Neighbourhood Group
+Insight:
+- Queens has the highest average monthly reviews for Entire homes (2.07).
+- Shared rooms generally have fewer reviews per month.
+Trend: Entire homes tend to get more engagement across all neighbourhoods.
 
-Visualizations Sheet Summary
-----------------------------
+ 4. Average Nights Stayed by Room Type
+Insight:
+- Entire homes: 9 nights (longest)
+- Private rooms: 5 nights
+- Shared rooms: 6 nights
+Trend: Guests prefer staying longer in entire apartments.
 
-1. Total Airbnb Listings (KPI Card)
-   - Measure: Count of unique ids
-   - Dynamic: Updates with slicers (e.g., room type or neighborhood group)
-   - Purpose: High-level overview of total active listings
+ 5. Top Neighbourhoods by Average Price/Day
+Insight:
+- Battery Park City, Flatiron District, and Midtown are the most expensive.
+- Neighborhoods like Woodrow and West Village show moderately high pricing.
+Trend: Centrally located or tourist-heavy neighborhoods dominate top pricing.
 
-2. Top 10 Neighbourhoods by Average Price
-   - Rows: neighbourhood
-   - Values: Average of price
-   - Filter: Top 10 by price
-   - Insight: Highlights most expensive neighbourhoods on average
+ 6. Top 10 Relationships Between Locations and Neighborhoods
+Insight:
+- Shows the average latitude and longitude of top neighborhoods.
+- Useful for mapping out where the high-activity areas are geographically.
 
-3. Room Types vs Price by Neighbourhood Group
-   - Columns: room_type
-   - Rows: neighbourhood_group
-   - Values: Average of price
-   - Insight: Shows how pricing varies by room type in each NYC region
+ 7. Room Types and Availability in Different Neighbourhood Groups
+Insight:
+- Manhattan has significantly more availability days for Entire homes (~1.5 million days).
+- Shared rooms have consistently lower availability across all boroughs.
+Trend: High-end areas prioritize more available days for high-value listings.
 
-4. Monthly Reviews by Room Type
-   - Columns: room_type
-   - Rows: neighbourhood_group
-   - Values: Average of reviews_per_month
-   - Insight: Reveals engagement level with listings per room type
+ 8. Top 10 Reviewed Hosts (Based on Monthly Reviews)
+Insight:
+- Host “Rova NYC” and “Nakia” lead with over 15 average monthly reviews.
+- Other top hosts include “Miss Dly”, “Koani”, “Diana”.
+Trend: A small group of hosts dominate guest engagement.
 
-5. Top 10 Reviewed Hosts
-   - Rows: host_name or host_id
-   - Values: Average of reviews_per_month
-   - Filter: Top 10
-   - Insight: Identifies most popular hosts based on review frequency
+📌 Key Takeaways
+🏠 Entire homes dominate both price and availability.
+🌆 Manhattan remains the most premium borough in all metrics.
+📊 Strong use of pivot tables, slicers, and bar/column charts to convey patterns clearly.
+🎯 Dashboard is interactive and useful for both business and academic analysis.
 
-6. Room Types vs Availability
-   - Columns: room_type
-   - Rows: neighbourhood_group
-   - Values: Sum of availability_365
-   - Insight: Tracks total available nights by room type in each borough
-
-Filters & Slicers
------------------
-- Slicers added for:
-  - room_type
-  - neighbourhood_group
-- All slicers are connected across all pivot tables to make the dashboard interactive and dynamic.
-
-Key Insights
-------------
-- Entire homes/apartments are priced highest across all boroughs.
-- Manhattan has the highest average listing prices and review frequency.
-- Shared rooms are the least reviewed and least available across neighbourhoods.
-- Some hosts consistently receive high monthly reviews, indicating strong guest engagement.
-- Listings with higher availability often correlate with more consistent review activity.
-
-How to Use
-----------
-1. Use slicers on the right to filter data by room type or neighbourhood group.
-2. Watch KPIs and charts auto-update to reflect your filters.
-3. Hover over charts to see data points clearly.
