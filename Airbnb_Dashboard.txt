@@ -1,0 +1,75 @@
+
+Airbnb NYC 2019 Dashboard
+=========================
+
+Overview
+--------
+This Excel dashboard analyzes Airbnb listings in New York City using the 2019 dataset. It includes pivot tables, slicers, and charts to explore listing availability, pricing, reviews, and host activity across different neighborhoods and room types.
+
+Dataset: Airbnb NYC 2019
+------------------------
+- Source: Airbnb Open Data (2019 NYC listings)
+- Fields used:
+  - id, host_id, host_name
+  - neighbourhood_group, neighbourhood
+  - room_type, price, availability_365
+  - reviews_per_month, last_review, number_of_reviews
+
+Visualizations Sheet Summary
+----------------------------
+
+1. Total Airbnb Listings (KPI Card)
+   - Measure: Count of unique ids
+   - Dynamic: Updates with slicers (e.g., room type or neighborhood group)
+   - Purpose: High-level overview of total active listings
+
+2. Top 10 Neighbourhoods by Average Price
+   - Rows: neighbourhood
+   - Values: Average of price
+   - Filter: Top 10 by price
+   - Insight: Highlights most expensive neighbourhoods on average
+
+3. Room Types vs Price by Neighbourhood Group
+   - Columns: room_type
+   - Rows: neighbourhood_group
+   - Values: Average of price
+   - Insight: Shows how pricing varies by room type in each NYC region
+
+4. Monthly Reviews by Room Type
+   - Columns: room_type
+   - Rows: neighbourhood_group
+   - Values: Average of reviews_per_month
+   - Insight: Reveals engagement level with listings per room type
+
+5. Top 10 Reviewed Hosts
+   - Rows: host_name or host_id
+   - Values: Average of reviews_per_month
+   - Filter: Top 10
+   - Insight: Identifies most popular hosts based on review frequency
+
+6. Room Types vs Availability
+   - Columns: room_type
+   - Rows: neighbourhood_group
+   - Values: Sum of availability_365
+   - Insight: Tracks total available nights by room type in each borough
+
+Filters & Slicers
+-----------------
+- Slicers added for:
+  - room_type
+  - neighbourhood_group
+- All slicers are connected across all pivot tables to make the dashboard interactive and dynamic.
+
+Key Insights
+------------
+- Entire homes/apartments are priced highest across all boroughs.
+- Manhattan has the highest average listing prices and review frequency.
+- Shared rooms are the least reviewed and least available across neighbourhoods.
+- Some hosts consistently receive high monthly reviews, indicating strong guest engagement.
+- Listings with higher availability often correlate with more consistent review activity.
+
+How to Use
+----------
+1. Use slicers on the right to filter data by room type or neighbourhood group.
+2. Watch KPIs and charts auto-update to reflect your filters.
+3. Hover over charts to see data points clearly.
